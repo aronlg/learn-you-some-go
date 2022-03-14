@@ -2,8 +2,13 @@ package main
 
 import "fmt"
 
+const helloPrefix = "Hello, "
+
 func Hello(name string) string {
-	const helloPrefix = "Hello, "
+	if name == "" {
+		name = "World"
+	}
+
 	return helloPrefix + name
 }
 
